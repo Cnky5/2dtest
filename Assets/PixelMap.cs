@@ -37,10 +37,10 @@ MapData mapData;
     PixelChunk chunk(int x, int y)
     {
         PixelChunk chunk = Instantiate(pixelChunkPrefab);
-        chunk.transform.position = new Vector2(x*chunkSize, y*chunkSize);
+        chunk.transform.position = new Vector2(x*-chunkSize, y*-chunkSize);
         chunk.name = x +","+y;
-        chunk.transform.parent = transform;
-        chunk.GenerateChunk();
+        //chunk.transform.parent = transform;
+        //chunk.GenerateChunk();
 
         return chunk;
     }
